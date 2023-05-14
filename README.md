@@ -25,3 +25,4 @@ IP 158.160.99.4
 
 Backend https://film.nomoredomains.monster/api
 
+Макет в Figma https://www.figma.com/file/xAVgwFN2cbmKyiEG6TFBDJ/Diploma_zhe
