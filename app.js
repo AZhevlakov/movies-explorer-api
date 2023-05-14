@@ -27,7 +27,7 @@ app.use(requestLogger); // логгер запросов
 
 app.use(cors());
 
-app.use(router); // обработчик роутов
+app.use('/api', router); // обработчик роутов
 
 app.use(errorLogger); // логгер ошибок
 app.use(errors()); // обработчик ошибок celebrate
