@@ -14,16 +14,16 @@ const app = express();
 const { PORT = devPort, DB_ADDRESS = devDBAddress } = process.env;
 const router = require('./routes');
 
-const limiter = rateLimit(rateLimitConfig);
-
 app.use(helmet());
+
+app.use(requestLogger); // логгер запросов
+
+const limiter = rateLimit(rateLimitConfig);
 app.use(limiter);
 
 app.use(express.json());
 
 mongoose.connect(DB_ADDRESS);
-
-app.use(requestLogger); // логгер запросов
 
 app.use(cors());
 
