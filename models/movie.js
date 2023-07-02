@@ -3,23 +3,7 @@ const { urlRegExp } = require('../utils/constants');
 
 const movieSchema = new mongoose.Schema(
   {
-    country: {
-      type: String,
-      required: true,
-    },
-    director: {
-      type: String,
-      required: true,
-    },
-    duration: {
-      type: Number,
-      required: true,
-    },
-    year: {
-      type: String,
-      required: true,
-    },
-    description: {
+    nameRU: {
       type: String,
       required: true,
     },
@@ -43,14 +27,8 @@ const movieSchema = new mongoose.Schema(
       },
       required: true,
     },
-    thumbnail: {
-      type: String,
-      validate: {
-        validator(url) {
-          return urlRegExp.test(url);
-        },
-        message: 'Некорректная ссылка миниатюрного изображения постера',
-      },
+    duration: {
+      type: Number,
       required: true,
     },
     owner: {
@@ -62,14 +40,36 @@ const movieSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    nameRU: {
-      type: String,
-      required: true,
-    },
-    nameEN: {
-      type: String,
-      required: true,
-    },
+    // country: {
+    //   type: String,
+    //   required: true,
+    // },
+    // director: {
+    //   type: String,
+    //   required: true,
+    // },
+    // year: {
+    //   type: String,
+    //   required: true,
+    // },
+    // description: {
+    //   type: String,
+    //   required: true,
+    // },
+    // thumbnail: {
+    //   type: String,
+    //   validate: {
+    //     validator(url) {
+    //       return urlRegExp.test(url);
+    //     },
+    //     message: 'Некорректная ссылка миниатюрного изображения постера',
+    //   },
+    //   required: true,
+    // },
+    // nameEN: {
+    //   type: String,
+    //   required: true,
+    // },
   },
   { versionKey: false },
 );
