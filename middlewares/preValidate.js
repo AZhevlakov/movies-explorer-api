@@ -31,17 +31,17 @@ const idValidate = celebrate({
 
 const createMovieValidate = celebrate({
   body: Joi.object().keys({
-    country: Joi.string().required(),
-    director: Joi.string().required(),
-    duration: Joi.number().required(),
-    year: Joi.string().required(),
-    description: Joi.string().required(),
-    image: Joi.string().regex(urlRegExp).required(),
-    trailerLink: Joi.string().regex(urlRegExp).required(),
-    thumbnail: Joi.string().regex(urlRegExp).required(),
     movieId: Joi.number().required(),
     nameRU: Joi.string().required(),
-    nameEN: Joi.string().required(),
+    image: Joi.string().regex(urlRegExp).required(),
+    trailerLink: Joi.string().regex(urlRegExp).required(),
+    duration: Joi.number().required(),
+    // country: Joi.string().required(),
+    // director: Joi.string().required(),
+    // year: Joi.string().required(),
+    // description: Joi.string().required(),
+    // thumbnail: Joi.string().regex(urlRegExp).required(),
+    // nameEN: Joi.string().required(),
   }),
 });
 
