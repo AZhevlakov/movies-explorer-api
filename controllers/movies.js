@@ -10,14 +10,14 @@ const getMovies = (req, res, next) => {
 const createMovie = (req, res, next) => {
   const {
     movieId,
-    nameRu,
+    nameRU,
     image,
     trailerLink,
     duration,
   } = req.body;
   Movie.create({
     movieId,
-    nameRu,
+    nameRU,
     image,
     trailerLink,
     duration,
