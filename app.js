@@ -26,7 +26,7 @@ app.use(express.json());
 
 mongoose.connect(DB_ADDRESS);
 
-app.use(router); // обработчик роутов
+app.use('/api', router); // обработчик роутов
 
 app.use(errorLogger); // логгер ошибок
 app.use(errors()); // обработчик ошибок celebrate
